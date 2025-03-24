@@ -60,25 +60,25 @@
                 <span class="author-block">
                   <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Zhuokai Zhao</a>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Shen Yan</a>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Shen Yan</a>,
                   </span>
               <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Lukasz Korycki</a>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Lukasz Korycki</a>,
                   </span>
               <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Jianyu Wang</a>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Jianyu Wang</a>,
                   </span>
               <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Baosheng He</a>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Baosheng He</a>,
                   </span>
               <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Jiayi Liu</a>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Jiayi Liu</a>,
                   </span>
               <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Lizhu Zhang</a>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Lizhu Zhang</a>,
                   </span>
               <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Xiangjun Fan</a>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Xiangjun Fan</a>,
                   </span>
               <span class="author-block">
                     <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Hanchao Yu</a>
@@ -115,7 +115,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/haoyu-bu/CAFe" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -144,7 +144,7 @@
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
@@ -153,11 +153,11 @@
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End teaser video -->
 
 <!-- Paper abstract -->
@@ -168,7 +168,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            The rapid advancement of large vision-language models (LVLMs) has driven significant progress in multimodal tasks, enabling models to interpret, reason, and generate outputs across both visual and textual domains. While excelling in generative tasks, existing LVLMs often face limitations in tasks requiring high-fidelity representation learning, such as generating image or text embeddings for retrieval. Recent work has proposed finetuning LVLMs for representational learning, but the fine-tuned model often loses its generative capabilities due to the representational learning training paradigm. To address this trade-off, we introduce CAFe, a contrastive-autoregressive fine-tuning framework that enhances LVLMs for both representation and generative tasks. By integrating a contrastive objective with autoregressive language modeling, our approach unifies these traditionally separate tasks, achieving state-of-the-art results in both multimodal retrieval and multimodal generative benchmarks, including object hallucination (OH) mitigation. CAFe establishes a novel framework that synergizes embedding and generative functionalities in a single model, setting a foundation for future multimodal models that excel in both retrieval precision and coherent output generation.
           </p>
         </div>
       </div>
@@ -221,7 +221,7 @@
 
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
@@ -237,12 +237,12 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End youtube video -->
 
 
 <!-- Video carousel -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Another Carousel</h2>
@@ -271,7 +271,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End video carousel -->
 
 
@@ -280,7 +280,7 @@
 
 
 <!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster</h2>
@@ -290,7 +290,7 @@
         
       </div>
     </div>
-  </section>
+  </section> -->
 <!--End paper poster -->
 
 
@@ -298,7 +298,12 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@article{yu2025cafe,
+  title={CAFe: Unifying Representation and Generation with Contrastive-Autoregressive Finetuning},
+  author={Yu, Hao and Zhao, Zhuokai and Yan, Shen and Korycki, Lukasz and Wang, Jianyu and He, Baosheng and Liu, Jiayi and Zhang, Lizhu and Fan, Xiangjun and Yu, Hanchao},
+  journal={arXiv preprint},
+  year={2025}
+}</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
