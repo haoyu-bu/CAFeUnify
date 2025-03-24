@@ -56,37 +56,38 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Hao Yu</a>,</span>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Hao Yu</a><sup>1,2,&#8224;</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Zhuokai Zhao</a>,</span>
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Zhuokai Zhao</a><sup>1</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Shen Yan</a>,
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Shen Yan</a><sup>1</sup>,
                   </span>
               <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Lukasz Korycki</a>,
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Lukasz Korycki</a><sup>1</sup>,
                   </span>
               <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Jianyu Wang</a>,
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Jianyu Wang</a><sup>1</sup>,
                   </span>
               <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Baosheng He</a>,
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Baosheng He</a><sup>1</sup>,
                   </span>
               <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Jiayi Liu</a>,
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Jiayi Liu</a><sup>1</sup>,
                   </span>
               <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Lizhu Zhang</a>,
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Lizhu Zhang</a><sup>1</sup>,
                   </span>
               <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Xiangjun Fan</a>,
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Xiangjun Fan</a><sup>1</sup>,
                   </span>
               <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Hanchao Yu</a>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Hanchao Yu</a><sup>1</sup>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Meta<br>2025</span>
+                    <span class="author-block"><sup>1</sup>Meta, <sup>2</sup>Boston University<br>2025</span>
+                    <span class="eql-cntrb"><small><br><sup>&#8224;</sup>Work done during an internship at Meta</small></span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -103,7 +104,7 @@
                     </span>
 
                     <!-- Supplementary PDF link -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -111,7 +112,7 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -143,22 +144,23 @@
 </section>
 
 
-<!-- Teaser video-->
-<!-- <section class="hero teaser">
+<!-- Teaser-->
+<section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
+      <img src="static/images/teaser.jpeg" alt="MY ALT TEXT"/>
       <h2 class="subtitle has-text-centered">
-        
+        Capabilities of various vision-language models. While encoder-based models, e.g., CLIP, excel in generating
+        vision-text aligned embeddings and show promising results in image-text retrieval, they fall short in producing free-form
+        text and reasoning about retrieved images (left). Conversely, Multimodal Large Language Models (MLLMs) have
+        shown remarkable success in multimodal understanding and generation, but their direct embeddings yield suboptimal
+        retrieval results (middle). CAFe effectively bridges this gap by integrating representation learning and language
+        generation, enabling not only retrieval but also advanced generative capabilities (right).
       </h2>
     </div>
   </div>
-</section> -->
-<!-- End teaser video -->
+</section>
+<!-- End teaser -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -185,30 +187,37 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/pipelinev2.jpeg" alt="MY ALT TEXT" class="center"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Pipeline of the proposed framework, CAFe. It leverages a pretrained MLLM to jointly encode multimodal
+          input and generate language responses. The model is trained using a weighted combination of contrastive loss and
+          autoregressive language modeling loss on paired multimodal input. Specialized embedding instructions are designed to
+          prompt the MLLM to generate effective embeddings, while language instructions are employed for language generation.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/multi_retrieval.png" alt="MY ALT TEXT" class="center"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          Multimodal retrieval results on the Multimodal Embedding Benchmark (MMEB), with scores averaged across
+          each meta-task, as well as average scores for in-distribution datasets (IND), out-of-distribution datasets (OOD) and all
+          datasets (Overall).
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/hallucination.png" alt="MY ALT TEXT" class="center"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
+          THRONE Results on MSCOCO validation set. Class-wise and overall scores are reported. CAFe outperforms
+          baselines and achieves state-of-the-art performance on mitigating object hallucinations.
        </h2>
      </div>
      <div class="item">
       <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+      <img src="static/images/gap.png" alt="MY ALT TEXT" class="center"/>
       <h2 class="subtitle has-text-centered">
-        Fourth image description.
+        Scatter plots of image-text embeddings from MSCOCO. Left is LLaVA-OV, and right is the proposed CAFe. 
+        CAFe removes the existing modality gap in multimodal representation space.
       </h2>
     </div>
   </div>
@@ -216,67 +225,6 @@
 </div>
 </section>
 <!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-<!-- End video carousel -->
-
-
-
-
 
 
 <!-- Paper poster -->
